@@ -10,7 +10,7 @@ AUTH_USER_MODEL = 'user_management.User'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ticketdb',
+        'NAME': 'userdb',
         'USER': 'admin',
         'PASSWORD': 'password',
         'HOST': 'localhost',

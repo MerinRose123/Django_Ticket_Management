@@ -39,3 +39,36 @@ class RegisterView(FormView):
         # It should return an HttpResponse.
         form.send_email()
         return super().form_valid(form)
+
+
+def addticket(request):
+    # processing the data after the user has entered the details in the form
+    if request.method == 'POST':
+        form = TicketAddForm(request.POST)
+        # Creating a new user with given details
+        q = Ticket()
+        q.save()
+        #messages.success(request, 'user registered successfully.')
+        response = redirect('../login/')
+        return response
+
+    else:
+        # Rendering the form in html initially
+        form = TicketAddForm()
+    return render(request, 'addticket.html', {'form': form})
+
+
+def deleteticket(request):
+    if request.method == 'POST':
+        form = TicketDeleteForm(request.POST)
+        q = Ticket()
+        q.save()
+        response = redirect('../home/')
+        return response
+
+    else:
+        # Rendering the form in html initially
+        form = TicketDeleteForm()
+    return render(request, 'deleteticket.html', {'form': form})
+
+

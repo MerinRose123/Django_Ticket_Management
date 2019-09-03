@@ -4,32 +4,39 @@
         <h2><center>Ticket Management System</center></h2>
       <div class="form">
         <form class="login-form">
-            <h3>Register Here</h3>
+            <h3>Create New Ticket</h3>
           {% csrf_token %}
             <table>
                 <tr>
-                    <td>{{ form.username }}</td>
+                    <td>{{ form.assigned_to.label }}</td>
+                    <td>{{ form.assigned_to }}</td>
                 </tr>
                 <tr>
-                    <td>{{ form.first_name }}</td>
+                    <td>{{ form.start_date.label }}</td>
+                    <td>{{ form.start_date }}</td>
                 </tr>
                 <tr>
-                    <td>{{ form.last_name }}</td>
+                    <td>{{ form.end_date.label }}</td>
+                    <td>{{ form.end_date }}</td>
                 </tr>
                 <tr>
-                    <td>{{ form.phone }}</td>
+                    <td>{{ form.subject.label }}</td>
+                    <td>{{ form.subject }}</td>
                 </tr>
                 <tr>
-                    <td>{{ form.password }}</td>
+                     <td>{{ form.message.label }}</td>
+                    <td>{{ form.message }}</td>
                 </tr>
                 <tr>
-                    <td>{{ form.password1 }}</td>
+                    <td>{{ form.state.label }}</td>
+                    <td>{{ form.state }}</td>
                 </tr>
                 <tr>
-                    <td>{{ form.designation.label }}:{{ form.designation }}</td>
+                     <td>{{ form.priority.label }}</td>
+                    <td>{{ form.priority }}</td>
                 </tr>
             </table>
-            <input id="submit" class="button" type="submit" value="Register" />
+            <input id="submit" class="button" type="submit" value="Create Ticket" />
           <!--<p class="message">Not registered? <a href="#">Create an account</a></p>-->
         </form>
           <div id="container">

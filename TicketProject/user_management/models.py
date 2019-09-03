@@ -9,14 +9,11 @@ import datetime
 # Changing the base user fields
 class User(AbstractUser):
     phone = PhoneField(blank=True, null=True, help_text='Contact phone number')
+    is_system_admin = models.BooleanField(default=False, null=True, blank=True)
 
     class Meta:
         db_table = 'user'
-        default_permissions = [('add_user', 'add new user'),
-                               ('change_user', 'change existing user details'),
-                               ('delete_user', 'delete a user'),
-                               ('view_user', 'view current users')
-                               ]
+
         permissions = [('view_system_admin', 'Can view system admins'),
                        ]
 
@@ -45,7 +42,7 @@ class Ticket(models.Model):
     state = models.CharField(
         max_length=3,
         choices=STATE_CHOICES,
-        default='created'
+        default='CRT'
     )
 
     # Choices for adding priority
@@ -57,10 +54,10 @@ class Ticket(models.Model):
         (MEDIUM, 'medium priority'),
         (HIGH, 'high priority'),
     ]
-    state = models.CharField(
+    priority = models.CharField(
         max_length=1,
         choices=PRIORITY_CHOICES,
-        default='low'
+        default='L'
     )
 
     class Meta:
@@ -71,11 +68,6 @@ class Ticket(models.Model):
         permissions = [('change_state', 'Can change state'),
                        ('assign_to', 'can assign system admin')
                        ]
-        default_permissions = [('add_ticket', 'add new ticket'),
-                               ('change_ticket', 'change existing ticket'),
-                               ('delete_ticket', 'delete a ticket'),
-                               ('view_ticket', 'view the current ticket')
-                               ]
 
     def __str__(self):
         return self.ticket_id

@@ -21,10 +21,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'cn9$%=3h7ot3$ld*o!a1$6m816-)=6y!77e9+ru2q-4oc-tlql'
-#SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = os.environ.get('SECRET_KEY')
 
-import django
-#django.setup()
+# import django
+# django.setup()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

@@ -4,7 +4,7 @@ from django.contrib.auth.models import Group, Permission
 
 
 def create_group(name, permissions):
-    group = Group.objects.create(name=name)
+    group = Group.objects.get_or_create(name=name)
     [group.permissions.add(permission) for permission in permissions]
 
 
