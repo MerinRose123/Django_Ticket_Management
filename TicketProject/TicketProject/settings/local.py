@@ -1,6 +1,5 @@
 from .settings import *
 
-
 # Allowing all users in the network to access the site.
 ALLOWED_HOSTS = ['*']
 

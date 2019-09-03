@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load admin_urls %}
+{% load static %}
+<link rel = "stylesheet" type= "text/css" href = "{% static 'user_management/css/style.css' %}"/>
+<body id="bg" style="background-image: url('{% static 'user_management/images/bgimage.jpg'%}')">
+{% block content %}
+    <div class="login-page">
+        <h2><center>Ticket Management System</center></h2>
+      <div class="form">
+        <form class="login-form">
+          {% csrf_token %}
+            <table>
+                <tr>
+                    <td>{{ form.username }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.password }}</td>
+                </tr>
+            </table>
+            <input id="submit" class="button" type="submit" value="Login" />
+          <!--<p class="message">Not registered? <a href="#">Create an account</a></p>-->
+        </form>
+          <div id="container">
+            <div class="error">
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li>
+                            {{ message }}
+                        </li>
+                    {% endfor %}
+                {% endif %}
+                </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+{% endblock %}
+</body>
+
+
