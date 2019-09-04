@@ -1,0 +1,46 @@
+{% extends 'login.html' %}
+{% block content %}
+    <div class="login-page">
+        <h2><center>Ticket Management System</center></h2>
+      <div class="form">
+          <h3>Edit Userdata Here</h3>
+        <form class="login-form" method='POST' novalidate>
+          {% csrf_token %}
+            <table>
+                <tr>
+                    <td>{{form.username.label}}:{{ form.username }}</td>
+                </tr>
+                <tr>
+                    <td>{{form.first_name.label}}:{{ form.first_name }}</td>
+                </tr>
+                <tr>
+                    <td>{{form.last_name.label}}:{{ form.last_name }}</td>
+                </tr>
+                <tr>
+                    <td>{{form.email.label}}:{{ form.email }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.phone.label }}:{{ form.phone }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.designation.label }}:{{ form.designation }}</td>
+                </tr>
+            </table>
+            <input id="submit" class="button" type="submit" value="Update" />
+        </form>
+          <div id="container">
+            <div class="error">
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li>
+                            {{ message }}
+                        </li>
+                    {% endfor %}
+                {% endif %}
+                </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+{% endblock %}

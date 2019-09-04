@@ -1,0 +1,44 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load has_group %}
+
+{% block content %}
+    <table border="1" class="table">
+		<thead>
+			<tr colspan="2" class="success">
+				<th>Ticket id: </th>
+				<th> Assigned to: </th>
+                <th> start date: </th>
+                <th> End date: </th>
+                <th> Subject: </th>
+                <th> Message: </th>
+                <th> State: </th>
+                <th> Priority: </th>
+                 <th> Update: </th>
+			</tr>
+		</thead>
+		<tbody>
+		{% for data in ticketlist %}
+			<tr class="warning">
+                <td>{{ data.ticket_id}}</td>
+				<td>{% for m_obj in data.many_set.all %}
+                        {{ m_obj.username }}
+                    {% endfor %}
+                </td>
+                <td>{{ data.start_date}}</td>
+                <td>{{ data.end_date}}</td>
+                <td>{{ data.subject}}</td>
+                <td>{{ data.message}}</td>
+                <td>{{ data.state}}</td>
+                <td>{{ data.priority}}</td>
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    <input type="hidden" name="ticket" value="{{ data.ticket_id }}">
+                    <td><input type="submit" value="Update"></td>
+                </form>
+			</tr>
+
+		{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

@@ -7,6 +7,26 @@ body, h1, h2, h3 {
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
+#container{
+	height:100%;
+}
+.header{
+	height : 100px;
+	width: 100%;
+	background-color: #f8f8f8;
+}
+
+.block{
+	float:left;
+	width:32%;
+	border: 3px solid #0f0f0f;
+	border-style:inset;
+	border-radius:10px;
+	min-height:100px;
+	max-height:300px;
+	margin-left:.8%;
+	overflow:auto;
+}
 
 a, .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
   color: blue;
@@ -19,6 +39,10 @@ a:hover, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:h
 footer {
     padding: 50px 0;
     background-color: #f8f8f8;
+}
+
+p{
+    color: green;
 }
 
 p.copyright {
@@ -99,9 +123,7 @@ p.copyright {
     font-size: 14px;
 }
 
-.wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -4em;
+.container1{
+	height:calc(100% - 150px);
+	overflow:auto;
 }

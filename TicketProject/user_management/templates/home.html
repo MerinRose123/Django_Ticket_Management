@@ -1,4 +1,52 @@
-{% extends 'base.html' %}
-{% block body %}
-jxdfkjxrykxt
+{% extends 'base1.html' %}
+{% load static %}
+{% load has_group %}
+
+{% block links %}
+        <a href="{% static '../home/' %}">home</a>
+      {% if request.user|has_group:"super_admin" %}
+         <div class="dropdown">
+            <button class="dropdown-button">Ticket operations</button>
+            <div class="dropdown-list">
+                <a href="{% static '../addticket/' %}">Add Ticket</a>
+                <a href="{% static '../deleteticket/' %}">Delete Ticket</a>
+                <a href="{% static '../listticket/' %}">List Tickets</a>
+                 <a href="#">Update a Ticket</a>
+            </div>
+         </div>
+        <div class="dropdown">
+            <button class="dropdown-button">User Operations</button>
+            <div class="dropdown-list">
+                <a href="{% static '../register/' %}">create User</a>
+                <a href="{% static '../deleteuser/' %}">Delete User</a>
+                <a href="{% static '../listuser/' %}">List Users</a>
+                 <a href="#">Update User details</a>
+            </div>
+        </div>
+        super_admin   |
+      {% elif request.user|has_group:"senior_system_admin"%}
+        senior_system_admin    |
+      {% elif request.user|has_group:"system_admin"%}
+        system_admin    |
+      {% else %}
+        No designation specified    |
+      {% endif %}
+    <a href="{% static '../logout/' %}">logout</a>   |
+
+{% endblock %}
+
+{% block content %}
+    <div class="success">
+					{% if messages %}
+						<ul class="messages">
+							{% for message in messages %}
+								<li>
+									{{ message }}
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</div>
+    {% block data %}
+    {% endblock %}
 {% endblock %}

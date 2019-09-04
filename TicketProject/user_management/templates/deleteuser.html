@@ -1,0 +1,31 @@
+{% extends 'login.html' %}
+{% block content %}
+    <div class="login-page">
+        <h2><center>Ticket Management System</center></h2>
+      <div class="form">
+        <form class="login-form" method="POST" novalidate>
+            <h3>Delete A User</h3>
+          {% csrf_token %}
+            <table>
+                <tr>
+                    <td>{{ form.username }}</td>
+                </tr>
+            </table>
+            <input id="submit" class="button" type="submit" value="Delete User" />
+        </form>
+          <div id="container">
+            <div class="error">
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li>
+                            {{ message }}
+                        </li>
+                    {% endfor %}
+                {% endif %}
+                </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+{% endblock %}

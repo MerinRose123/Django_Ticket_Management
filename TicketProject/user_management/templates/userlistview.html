@@ -1,0 +1,31 @@
+{% extends 'home.html' %}
+{% load static %}
+{% load has_group %}
+
+{% block content %}
+    <table border="1" class="table">
+		<thead>
+			<tr colspan="2" class="success">
+				<th>Username: </th>
+				<th> Email: </th>
+                <th> Designation: </th>
+				<td>Update :</td>
+			</tr>
+		</thead>
+		<tbody>
+		{% for data in userlogin %}
+			<tr class="warning">
+				<td>{{ data.username}}</td>
+                <td>{{ data.email}}</td>
+                <td>{{ data.groups.all.0 }}</td>
+				<form method="post"  novalidate>
+                    {% csrf_token %}
+                    <input type="hidden" name="username" value="{{ data.id }}">
+                    <td><input type="submit" value="Update"></td>
+                </form>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
+

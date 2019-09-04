@@ -11,10 +11,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/urls.py">
+        <entry file="file://$PROJECT_DIR$/user_management/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="164">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="15" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -23,10 +23,70 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_management/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_management/templates/edituser.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_management/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="112" selection-start-line="112" selection-end-line="112" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_management/templates/userlistview.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_management/templates/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="9" selection-end-line="51" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_management/templates/ticketlistview.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user_management/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="79" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+            <state relative-caret-position="362">
+              <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -35,77 +95,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/user_management/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-726">
-              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicketProject/static/user_management/css/base.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/templates/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-378">
-              <caret column="2" lean-forward="true" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-36">
-              <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="17" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user_management/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="191">
+              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_1208.py">
+        <entry file="file://$PROJECT_DIR$/user_management/templates/base1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1116">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-              <folding>
-                <element signature="e#49#89#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="234">
+              <caret line="31" column="24" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="36" selection-end-column="22" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1213.py">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -144,18 +148,25 @@
         <option value="$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1206.py" />
         <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_1208.py" />
         <option value="$PROJECT_DIR$/user_management/apps.py" />
-        <option value="$PROJECT_DIR$/user_management/forms.py" />
         <option value="$PROJECT_DIR$/user_management/templates/login.html" />
         <option value="$PROJECT_DIR$/user_management/templates/deleteticket.html" />
         <option value="$PROJECT_DIR$/user_management/templates/addticket.html" />
         <option value="$PROJECT_DIR$/user_management/templates/register.html" />
         <option value="$PROJECT_DIR$/user_management/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/user_management/models.py" />
-        <option value="$PROJECT_DIR$/user_management/templates/base.html" />
         <option value="$PROJECT_DIR$/TicketProject/static/user_management/css/base.css" />
-        <option value="$PROJECT_DIR$/user_management/templates/home.html" />
-        <option value="$PROJECT_DIR$/user_management/urls.py" />
+        <option value="$PROJECT_DIR$/user_management/templates/base.html" />
+        <option value="$PROJECT_DIR$/user_management/templates/base1.html" />
+        <option value="$PROJECT_DIR$/TicketProject/static/user_management/css/base1.css" />
+        <option value="$PROJECT_DIR$/user_management/templatetags/has_group.py" />
+        <option value="$PROJECT_DIR$/user_management/templates/deleteuser.html" />
+        <option value="$PROJECT_DIR$/user_management/templates/ticketlistview.html" />
+        <option value="$PROJECT_DIR$/user_management/forms.py" />
+        <option value="$PROJECT_DIR$/user_management/templates/edituser.html" />
         <option value="$PROJECT_DIR$/user_management/views.py" />
+        <option value="$PROJECT_DIR$/user_management/urls.py" />
+        <option value="$PROJECT_DIR$/user_management/templates/userlistview.html" />
+        <option value="$PROJECT_DIR$/user_management/templates/home.html" />
       </list>
     </option>
   </component>
@@ -192,6 +203,27 @@
             <path>
               <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
+              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
+              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="user_management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
+              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="user_management" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
               <item name="user_management" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -199,6 +231,12 @@
               <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
               <item name="user_management" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
+              <item name="user_management" type="462c0819:PsiDirectoryNode" />
+              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
@@ -212,16 +250,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/TicketProject/static/user_management/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user_management/templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/user_management/templates" />
+      <recent name="$PROJECT_DIR$/TicketProject/static/user_management/images" />
+      <recent name="$PROJECT_DIR$/TicketProject" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/user_management/templates" />
       <recent name="$PROJECT_DIR$/user_management" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/TicketProject/static/user_management/images" />
-      <recent name="$PROJECT_DIR$/TicketProject" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -293,7 +332,7 @@
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.42759797" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.30323678" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -323,21 +362,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0845.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0912.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0919.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0921.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0936.py" />
-    <entry file="file://$PROJECT_DIR$/TicketProject/assets/user_management/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="62" column="17" lean-forward="true" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user_management/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -382,34 +406,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/deleteticket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/addticket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user_management/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="35" column="129" selection-start-line="35" selection-start-column="129" selection-end-line="35" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -432,68 +432,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TicketProject/static/user_management/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-378">
-          <caret column="2" lean-forward="true" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user_management/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="288">
+          <caret line="28" column="24" selection-start-line="23" selection-start-column="12" selection-end-line="33" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/forms.py">
+    <entry file="file://$PROJECT_DIR$/TicketProject/static/user_management/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="79" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+        <state relative-caret-position="270">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/templates/addticket.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-72">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TicketProject/static/user_management/css/base1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/templatetags/has_group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/urls.py">
+    <entry file="file://$PROJECT_DIR$/user_management/templates/deleteticket.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="108">
+          <caret line="6" column="11" lean-forward="true" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/templates/deleteuser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="15" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/templates/base1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="31" column="24" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="36" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="9" selection-end-line="51" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/templates/edituser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/user_management/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-726">
-          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+        <state relative-caret-position="108">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/templates/ticketlistview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/templates/userlistview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_management/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
         </state>
       </provider>
     </entry>

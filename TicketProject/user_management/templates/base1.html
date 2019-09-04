@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+	<head>
+		<title>ticket management </title>
+		<link rel = "stylesheet" type= "text/css" href = "{% static 'user_management/css/base1.css' %}"/>
+		<meta name="viewport" content="width=device-width">
+	</head>
+	<body>
+		<div id="container">
+			<div class="header">
+				<div class="heading">
+					<p class="tajheading">TICKET MANAGEMENT SYSTEM</p>
+				</div>
+
+				<div class="navcontainer">
+                     Hi {{ request.user}}  |
+                    {% block links %}
+                        <a href="{% static '../login/' %}">login</a>   |
+					{% endblock %}
+				</div>
+			</div>
+			<div class="container1">
+				{% block content %}
+                    This is the base page.Please login to get started......
+				<div class="success">
+					{% if messages %}
+						<ul class="messages">
+							{% for message in messages %}
+								<li>
+									{{ message }}
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</div>
+
+				{% endblock %}
+			</div>
+			<div class="foot">
+				<footer>
+                    Copyright © 2019. All Rights Reserved
+				</footer>
+			</div>
+	    </div>
+	</body>
+</html>
+</html>

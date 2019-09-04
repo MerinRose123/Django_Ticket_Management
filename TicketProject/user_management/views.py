@@ -7,18 +7,12 @@ from django.contrib.auth import (
     update_session_auth_hash,
 
 )
-from django.http import HttpResponse
 from django.contrib.auth.hashers import make_password
 from django.contrib import messages
-from django.views.generic.edit import FormView
 from django.contrib.auth.models import Group
 from .forms import *
 from django.contrib.auth.decorators import login_required
-from django.views.decorators.cache import never_cache
-from django.views.decorators.csrf import csrf_protect
-from django.views.decorators.debug import sensitive_post_parameters
-from django.utils.decorators import method_decorator
-from django.utils.http import is_safe_url
+from .models import *
 
 
 # Adding user to group according to designation
@@ -52,7 +46,7 @@ def register(request):
                 q.save()
                 add_user_to_group(q, designation)
                 messages.success(request, 'user registered successfully.')
-                response = redirect('../login/')
+                response = redirect('../home/')
         else:
             messages.error(request, 'The passwords are not matching.')
             response = redirect('../register/')
@@ -70,16 +64,6 @@ def login_view(request):
         password = form.data["password"]
         # Authenticating the user by checking in the database
         user = authenticate(username=username, password=password)
-        '''
-        if form.is_valid():
-            if user is not None:
-                login(request, user)
-                messages.success(request, username + ' you are now logged in..!!!.')
-                response = redirect('../home/')
-                return response
-        else:
-            messages.error(request, 'Enter valid username and password.')
-        '''
         if user is not None:
             login(request, user)
             messages.success(request, username + ' you are now logged in..!!!.')
@@ -88,47 +72,102 @@ def login_view(request):
         else:
             messages.error(request, 'username or password are not correct.')
             return render(request, 'login.html', {'form': form})
-
     else:
         form = LoginForm()
     return render(request, 'login.html', {'form': form})
 
 
+# To logout an already logged in user
+@login_required
+def logoutview(request):
+    logout(request)
+    response = redirect('../login/')
+    return response
+
+
+# deleting a user
+@login_required
+def deleteuser(request):
+    if request.method == 'POST':
+        form = DeleteUserForm(request.POST)
+        instance = User.objects.get(username=form.data['username'])
+        instance.delete()
+        messages.success(request, 'User deleted successfully.')
+        return redirect('../home/')
+    else:
+        form = DeleteUserForm()
+    return render(request, 'deleteuser.html', {'form': form})
+
+
+# Viewing the details of all the users in the home page
+@login_required
+def listuser(request):
+    data = User.objects.all()
+    # group = User.groups.get(name='super_admin')
+    results = User.objects.filter(username=request.user)
+    # for user in results:
+        #print(user.groups.all())
+    return render(request, 'userlistview.html', {'userlogin': data})
+
+
+
+
 def base(request):
-    return render(request, 'base.html')
+    return render(request, 'base1.html')
 
 
 @login_required
 def home(request):
-    return render(request, 'base.html')
+    return render(request, 'home.html')
 
 
+@login_required
 def addticket(request):
     # processing the data after the user has entered the details in the form
     if request.method == 'POST':
         form = TicketAddForm(request.POST)
-        # Creating a new user with given details
-        q = Ticket()
+        assigned_to_id = form.data['assigned_to']
+        start_date = form.data['start_date']
+        end_date = form.data['end_date']
+        subject = form.data['subject']
+        message = form.data['message']
+        state = form.data['state']
+        priority = form.data['priority']
+        assigned_to = User.objects.get(id=assigned_to_id)
+        q = Ticket(assigned_to=assigned_to, start_date=start_date, end_date=end_date,
+                   subject=subject, message=message, state=state, priority=priority)
         q.save()
-        # messages.success(request, 'user registered successfully.')
-        response = redirect('../login/')
+        print('Ticket added')
+        response = redirect('../home/')
         return response
-
     else:
         # Rendering the form in html initially
         form = TicketAddForm()
     return render(request, 'addticket.html', {'form': form})
 
 
+@login_required
 def deleteticket(request):
     if request.method == 'POST':
         form = TicketDeleteForm(request.POST)
-        q = Ticket()
-        q.save()
-        response = redirect('../home/')
+        ticket_id = form.data['ticket_id']
+        if Ticket.objects.filter(ticket_id=ticket_id).exists():
+            instance = Ticket.objects.get(ticket_id=ticket_id)
+            instance.delete()
+            messages.success(request, 'Ticket deleted successfully.')
+            response =  redirect('../home/')
+        else:
+            messages.error(request, 'No ticket with the given Ticket id.')
+            response = redirect('../deleteticket/')
         return response
-
     else:
         # Rendering the form in html initially
         form = TicketDeleteForm()
     return render(request, 'deleteticket.html', {'form': form})
+
+
+# Viewing the details of all tickets
+@login_required
+def listticket(request):
+    data = Ticket.objects.all()
+    return render(request, 'ticketlistview.html', {'ticketlist': data})

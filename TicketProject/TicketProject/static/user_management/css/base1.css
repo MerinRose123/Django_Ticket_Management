@@ -1,0 +1,200 @@
+html,body{
+	margin : 0;
+	padding : 0;
+	height : 100%;
+	width:100%;
+}
+#container{
+	height:100%;
+}
+.header{
+	height : 100px;
+	width: 100%;
+	background-color: #f8f8f8;
+}
+
+.heading{
+	float:left;
+	margin-left: 10%;
+}
+h1{
+	color:orange;
+}
+.navcontainer{
+	float:right;
+	padding-top:70px;
+	color:green;
+}
+.navcontainer a{
+	color:blue;
+	text-decoration: none;
+}
+.button {
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+a:hover {
+  color: Dodgerblue;
+}
+.container1{
+	height:calc(100% - 150px);
+	overflow:auto;
+}
+.banner{
+	height:300px;
+	width:100%;
+}
+.banner img{
+	max-width: 100%;
+    max-height: 100%;
+    width:100%;
+}
+.sechead{
+	text-align:center;
+}
+.block{
+	float:left;
+	width:32%;
+	border: 3px solid #0f0f0f;
+	border-style:inset;
+	border-radius:10px;
+	min-height:100px;
+	max-height:300px;
+	margin-left:.8%;
+	overflow:auto;
+}
+.block button{
+	float:right;
+}
+.block button:hover{
+	background-color:black;
+	color:white;
+}
+p{
+	color:red;
+	font-family:verdana,sans serif;
+	font-weight:bold;
+	text-decoration:underline;
+}
+.foot{
+	background-color: #f8f8f8;
+	height:50px;
+	width:100%;
+}
+.foot footer{
+	color:green;
+}
+.tajheading{
+	font-weight:bold;
+	color:green;
+	font-size:25px;
+	text-decoration: none;
+}
+/* Dropdown Button */
+.dropdown-button {
+    color: green;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-list {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-list a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: verdana;
+}
+/* Change color of dropdown links on hover */
+.dropdown-list a:hover {
+    background-color: #ddd;
+}
+/* Show the dropdown list on hover */
+.dropdown:hover .dropdown-list {
+    display: block;
+}
+/* Change the background color of the dropdown button when the dropdown list is shown */
+.dropdown:hover .dropdown-button {
+    background-color: lavender;
+}
+
+
+@media all and (max-width: 768px) {
+	.logo img{
+		max-height:50px;
+	}
+	.banner{
+		height:150px;
+	}
+	.header{
+		height:100px;
+	}
+	.navcontainer{
+		padding-top:0px;
+	}
+	.block{
+		min-height:50px;
+		max-height:200px;
+		min-width:278px;
+	}
+	.container1{
+		height:calc(100% - 250px);
+	}
+	.tajheading{
+	font-weight:bold;
+	color:orange;
+	font-size:20px;
+	text-decoration: none;
+	}
+	.foot{
+		height:150px;
+	}
+}
+@media all and (max-width: 300px) {
+	.block{
+		min-height:50px;
+		max-height:200px;
+		min-width:200px;
+	}
+	.header{
+		height:200px;
+	}
+	.banner{
+		width:100%;
+	}
+	.container1{
+		height:calc(100% - 350px);
+	}
+	.foot{
+		height:150px;
+	}
+}
