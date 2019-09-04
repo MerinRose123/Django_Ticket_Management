@@ -89,14 +89,13 @@ def logoutview(request):
 @login_required
 def deleteuser(request):
     if request.method == 'POST':
-        form = DeleteUserForm(request.POST)
-        instance = User.objects.get(username=form.data['username'])
-        instance.delete()
+        id = request.POST.get('id')
+        User.objects.get(id=id).delete()
         messages.success(request, 'User deleted successfully.')
-        return redirect('../home/')
+        return redirect('../listuser/')
     else:
-        form = DeleteUserForm()
-    return render(request, 'deleteuser.html', {'form': form})
+        response = redirect('../home/')
+        return response
 
 
 # Viewing the details of all the users in the home page
@@ -166,21 +165,15 @@ def addticket(request):
 @login_required
 def deleteticket(request):
     if request.method == 'POST':
-        form = TicketDeleteForm(request.POST)
-        ticket_id = form.data['ticket_id']
+        ticket_id = request.POST.get("ticket_id")
         if Ticket.objects.filter(ticket_id=ticket_id).exists():
             instance = Ticket.objects.get(ticket_id=ticket_id)
             instance.delete()
             messages.success(request, 'Ticket deleted successfully.')
-            response = redirect('../home/')
-        else:
-            messages.error(request, 'No ticket with the given Ticket id.')
-            response = redirect('../deleteticket/')
-        return response
     else:
-        # Rendering the form in html initially
-        form = TicketDeleteForm()
-    return render(request, 'deleteticket.html', {'form': form})
+        messages.error(request, 'No ticket with the given Ticket id.')
+    response = redirect('../listticket/')
+    return response
 
 
 # Viewing the details of all tickets
@@ -188,3 +181,51 @@ def deleteticket(request):
 def listticket(request):
     data = Ticket.objects.all()
     return render(request, 'ticketlistview.html', {'ticketlist': data})
+
+
+@login_required
+def viewticket(request):
+    user = request.user
+    data = Ticket.objects.filter(assigned_to=user)
+    return render(request, 'viewticket.html', {'ticketlist': data})
+
+
+@login_required
+def edit_state_ticket(request):
+    if request.method == 'POST':
+        ticket_id = request.POST.get('ticket_id')
+        state = request.POST.get('state')
+        ticket = Ticket.objects.get(ticket_id=ticket_id)
+        if state == 'DNE':
+            ticket.state = state
+        else:
+            messages.error(request, 'Invalid ticket state.Type DNE for done or cancelled state.')
+        ticket.save()
+        response = redirect('../view_ticket_system_admin')
+    else:
+        response = redirect('../home/')
+    return response
+
+
+@login_required
+def editticket(request):
+    if request.method == 'POST':
+        assigned_to = request.POST.get('assigned_to')
+        start_date = request.POST.get('start_date')
+        end_date = request.POST.get('end_date')
+        ticket_id = request.POST.get('ticket_id')
+        subject = request.POST.get('subject')
+        state = request.POST.get('state')
+        ticket = Ticket.objects.get(ticket_id=ticket_id)
+        user = User.objects.get(username=assigned_to)
+        ticket.assigned_to = user
+        if start_date < end_date:
+            ticket.start_date = start_date
+            ticket.end_date = end_date
+        ticket.subject = subject
+        ticket.state = state
+        ticket.save()
+        response = redirect('../listticket')
+    else:
+        response = redirect('../home/')
+    return response

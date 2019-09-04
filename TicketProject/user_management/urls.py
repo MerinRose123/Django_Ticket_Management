@@ -15,4 +15,7 @@ urlpatterns = [
     path('listuser/', views.listuser, name='listuser'),
     path('deleteuser/', views.deleteuser, name='deleteuser'),
     path('edituser/', views.edituser, name='edituser'),
+    path('editticket/', views.editticket, name='editticket'),
+    path('view_ticket_system_admin/', views.viewticket, name='viewticket'),
+    path('edit_state_ticket/', views.edit_state_ticket, name='edit_state_ticket'),
 ]

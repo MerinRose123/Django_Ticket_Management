@@ -2,16 +2,19 @@
 {% load static %}
 {% load has_group %}
 
-{% block content %}
+{% block data %}
     <table border="1" class="table">
 		<thead>
 			<tr colspan="2" class="success">
-				<th> Assigned to: </th>
-                <th> start date: </th>
-                <th> End date: </th>
-                <th> Subject: </th>
-                <th> State: </th>
-                 <th> Update: </th>
+				<th> Assigned to </th>
+                <th> start date </th>
+                <th> End date </th>
+                <th> Subject </th>
+                <th> State </th>
+                 <th> Update </th>
+                {% if request.user|has_group:"super_admin" %}
+                    <th> Delete </th>
+                {% endif %}
 			</tr>
 		</thead>
 		<tbody>
@@ -27,6 +30,13 @@
 				    <td><input type="text" name="state" value="{{data.state }}"></td>
                     <td><input type="submit" value="Update"></td>
                 </form>
+                {% if request.user|has_group:"super_admin" %}
+                    <form method="post"  action="{% static '../deleteticket/' %}" novalidate>
+                         {% csrf_token %}
+                        <input type="hidden" name="ticket_id" value="{{ data.ticket_id }}">
+                        <td><input type="submit" value="Delete"></td>
+                    </form>
+                {% endif %}
 			</tr>
 
 		{% endfor %}

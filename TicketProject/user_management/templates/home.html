@@ -3,31 +3,46 @@
 {% load has_group %}
 
 {% block links %}
-        <a href="{% static '../home/' %}">home</a>
+        <a href="{% static '../home/' %}">home  |</a>
       {% if request.user|has_group:"super_admin" %}
          <div class="dropdown">
             <button class="dropdown-button">Ticket operations</button>
             <div class="dropdown-list">
                 <a href="{% static '../addticket/' %}">Add Ticket</a>
-                <a href="{% static '../deleteticket/' %}">Delete Ticket</a>
+                <a href="{% static '../listticket/' %}">Delete Ticket</a>
                 <a href="{% static '../listticket/' %}">List Tickets</a>
-                 <a href="#">Update a Ticket</a>
+                 <a href="{% static '../listticket/' %}">Update a Ticket</a>
             </div>
          </div>
         <div class="dropdown">
             <button class="dropdown-button">User Operations</button>
             <div class="dropdown-list">
                 <a href="{% static '../register/' %}">create User</a>
-                <a href="{% static '../deleteuser/' %}">Delete User</a>
+                <a href="{% static '../listuser/' %}">Delete User</a>
                 <a href="{% static '../listuser/' %}">List Users</a>
-                 <a href="#">Update User details</a>
+                 <a href="{% static '../listuser/' %}">Update User details</a>
             </div>
         </div>
         super_admin   |
       {% elif request.user|has_group:"senior_system_admin"%}
         senior_system_admin    |
+        <div class="dropdown">
+            <button class="dropdown-button">Ticket operations</button>
+            <div class="dropdown-list">
+                <a href="{% static '../addticket/' %}">Add Ticket</a>
+                <a href="{% static '../listticket/' %}">List Tickets</a>
+                 <a href="{% static '../listticket/' %}">Update a Ticket</a>
+            </div>
+         </div>
       {% elif request.user|has_group:"system_admin"%}
         system_admin    |
+        <div class="dropdown">
+            <button class="dropdown-button">Ticket operations</button>
+            <div class="dropdown-list">
+                <a href="{% static '../view_ticket_system_admin/' %}">View Ticket</a>
+                 <a href="{% static '../view_ticket_system_admin/' %}">Update state of a Ticket</a>
+            </div>
+         </div>
       {% else %}
         No designation specified    |
       {% endif %}
@@ -37,16 +52,17 @@
 
 {% block content %}
     <div class="success">
-					{% if messages %}
-						<ul class="messages">
-							{% for message in messages %}
-								<li>
-									{{ message }}
-								</li>
-							{% endfor %}
-						</ul>
-					{% endif %}
-				</div>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li>
+                        {{ message }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
     {% block data %}
+        Home
     {% endblock %}
 {% endblock %}

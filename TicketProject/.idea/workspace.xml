@@ -1,118 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="adcd27c8-b4a4-420a-ba94-e16cfb1c1ced" name="Default Changelist" comment="" />
+    <list default="true" id="adcd27c8-b4a4-420a-ba94-e16cfb1c1ced" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user_management/templates/viewticket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_1208.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1213.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/templates/deleteticket.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/templates/deleteuser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/templates/ticketlistview.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/templates/ticketlistview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/templates/userlistview.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/templates/userlistview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/templates/edituser.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/user_management/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/templates/userlistview.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="73" lean-forward="true" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TicketProject/static/user_management/css/base1.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/templates/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="9" selection-end-line="51" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/templates/ticketlistview.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="28" column="24" selection-start-line="23" selection-start-column="12" selection-end-line="33" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_management/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -122,119 +31,14 @@
       </list>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/user_management/admin.py" />
-        <option value="$PROJECT_DIR$/TicketProject/templates/user_management/login.html" />
-        <option value="$PROJECT_DIR$/TicketProject/urls.py" />
-        <option value="$PROJECT_DIR$/TicketProject/static/user_management/css/login.css" />
-        <option value="$PROJECT_DIR$/TicketProject/static/user_management/css/style.css" />
-        <option value="$PROJECT_DIR$/TicketProject/settings/settings.py" />
-        <option value="$PROJECT_DIR$/TicketProject/assets/user_management/css/style.css" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0845.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0912.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0919.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0921.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0925.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0928.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0936.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1010.py" />
-        <option value="$PROJECT_DIR$/TicketProject/settings/local.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_1002.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0004_auto_20190903_1118.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_1123.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1159.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1206.py" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_1208.py" />
-        <option value="$PROJECT_DIR$/user_management/apps.py" />
-        <option value="$PROJECT_DIR$/user_management/templates/login.html" />
-        <option value="$PROJECT_DIR$/user_management/templates/deleteticket.html" />
-        <option value="$PROJECT_DIR$/user_management/templates/addticket.html" />
-        <option value="$PROJECT_DIR$/user_management/templates/register.html" />
-        <option value="$PROJECT_DIR$/user_management/migrations/0001_initial.py" />
-        <option value="$PROJECT_DIR$/user_management/models.py" />
-        <option value="$PROJECT_DIR$/TicketProject/static/user_management/css/base.css" />
-        <option value="$PROJECT_DIR$/user_management/templates/base.html" />
-        <option value="$PROJECT_DIR$/user_management/templates/base1.html" />
-        <option value="$PROJECT_DIR$/user_management/templatetags/has_group.py" />
-        <option value="$PROJECT_DIR$/user_management/templates/deleteuser.html" />
-        <option value="$PROJECT_DIR$/user_management/templates/ticketlistview.html" />
-        <option value="$PROJECT_DIR$/user_management/forms.py" />
-        <option value="$PROJECT_DIR$/user_management/templates/edituser.html" />
-        <option value="$PROJECT_DIR$/user_management/templates/home.html" />
-        <option value="$PROJECT_DIR$/TicketProject/static/user_management/css/base1.css" />
-        <option value="$PROJECT_DIR$/user_management/urls.py" />
-        <option value="$PROJECT_DIR$/user_management/templates/userlistview.html" />
-        <option value="$PROJECT_DIR$/user_management/views.py" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="229" />
-    <option name="y" value="88" />
-    <option name="width" value="974" />
-    <option name="height" value="555" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
-              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
-              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
-              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
-              <item name="user_management" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
-              <item name="user_management" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TicketProject" type="462c0819:PsiDirectoryNode" />
-              <item name="user_management" type="462c0819:PsiDirectoryNode" />
-              <item name="templatetags" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TicketProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="1QNY2CKWqAKVKMn9FtoVY9EqBuN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/user_management/templates" />
   </component>
   <component name="RecentsManager">
@@ -294,6 +98,14 @@
       <option name="presentableId" value="Default" />
       <updated>1567152747774</updated>
     </task>
+    <task id="LOCAL-00001" summary="adding update to ticket">
+      <created>1567614702416</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567614702416</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -305,262 +117,19 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="67" y="32" width="1299" height="736" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24940991" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Python Console" order="1" weight="0.32879046" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.67291313" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.06473595" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.0681431" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24940991" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Python Console" order="1" weight="0.32879046" />
-      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.07155026" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.17206132" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.0681431" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0928.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0925.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_0959.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_0953.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_0959.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0004_auto_20190903_0946.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_0944.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1004.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0004_auto_20190903_1011.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0005_auto_20190903_1013.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1010.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0005_auto_20190903_1035.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1019.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_1002.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1037.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0005_auto_20190903_1120.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0004_auto_20190903_1118.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1124.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0004_auto_20190903_1158.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1159.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0004_ticket_state.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_1123.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1206.py" />
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1208.py" />
-    <entry file="file://$PROJECT_DIR$/TicketProject/settings/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1366">
-          <caret line="95" column="55" lean-forward="true" selection-start-line="95" selection-start-column="55" selection-end-line="95" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicketProject/settings/local.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="35" column="129" selection-start-line="35" selection-start-column="129" selection-end-line="35" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0005_auto_20190904_0406.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0004_auto_20190904_0405.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1213.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_1208.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#49#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicketProject/static/user_management/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/addticket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templatetags/has_group.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/deleteticket.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="11" lean-forward="true" selection-end-line="30" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/deleteuser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="78" selection-start-line="13" selection-start-column="78" selection-end-line="13" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/base1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="31" column="24" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="36" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="9" selection-end-line="51" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/edituser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/ticketlistview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="28" column="24" selection-start-line="23" selection-start-column="12" selection-end-line="33" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TicketProject/static/user_management/css/base1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/templates/userlistview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="73" lean-forward="true" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_management/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding update to ticket" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding update to ticket" />
   </component>
 </project>

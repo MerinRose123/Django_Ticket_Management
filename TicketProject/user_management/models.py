@@ -9,7 +9,6 @@ import datetime
 # Changing the base user fields
 class User(AbstractUser):
     phone = PhoneField(blank=True, null=True, help_text='Contact phone number')
-    # is_system_admin = models.BooleanField(default=False, null=True, blank=True)
 
     class Meta:
         db_table = 'user'

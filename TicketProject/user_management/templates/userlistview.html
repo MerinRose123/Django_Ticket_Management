@@ -10,12 +10,13 @@
 				<th> Email </th>
                 <th> Designation </th>
 				<th>Update </th>
+				<th>Delete </th>
 			</tr>
 		</thead>
 		<tbody>
 		{% for data in userlogin %}
 		<tr>
-			<div class="warning">
+			<div class="form">
 				<form method="post"  action="{% static '../edituser/' %}" novalidate>
 					 {% csrf_token %}
 					<td><input type="text" name="username" value="{{ data.username }}"></td>
@@ -23,6 +24,11 @@
 					<td><input type="text" name="email" value="{{ data.email }}"></td>
 				    <td><input type="text" name="designation" value="{{data.groups.all.0 }}"></td>
                     <td><input type="submit" value="Update"></td>
+                </form>
+				<form method="post"  action="{% static '../deleteuser/' %}" novalidate>
+					 {% csrf_token %}
+					<input type="hidden" name="id" value="{{ data.id }}">
+                    <td><input type="submit" value="Delete"></td>
                 </form>
 			</div>
 		</tr>
