@@ -54,7 +54,6 @@ a:hover {
 }
 .container1{
 	height:calc(100% - 150px);
-	overflow:auto;
 }
 .banner{
 	height:300px;

@@ -110,6 +110,23 @@ def listuser(request):
     return render(request, 'userlistview.html', {'userlogin': data})
 
 
+@login_required
+def edituser(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        id = request.POST.get('id')
+        designation = request.POST.get('designation')
+        user = User.objects.get(id=id)
+        user.username = username
+        user.email = email
+        user.save()
+        user.groups.clear()
+        add_user_to_group(user, designation)
+        response = redirect('../listuser')
+    else:
+        response = redirect('../home/')
+    return response
 
 
 def base(request):
@@ -155,7 +172,7 @@ def deleteticket(request):
             instance = Ticket.objects.get(ticket_id=ticket_id)
             instance.delete()
             messages.success(request, 'Ticket deleted successfully.')
-            response =  redirect('../home/')
+            response = redirect('../home/')
         else:
             messages.error(request, 'No ticket with the given Ticket id.')
             response = redirect('../deleteticket/')

@@ -6,25 +6,28 @@
     <table border="1" class="table">
 		<thead>
 			<tr colspan="2" class="success">
-				<th>Username: </th>
-				<th> Email: </th>
-                <th> Designation: </th>
-				<td>Update :</td>
+				<th>Username </th>
+				<th> Email </th>
+                <th> Designation </th>
+				<th>Update </th>
 			</tr>
 		</thead>
 		<tbody>
 		{% for data in userlogin %}
-			<tr class="warning">
-				<td>{{ data.username}}</td>
-                <td>{{ data.email}}</td>
-                <td>{{ data.groups.all.0 }}</td>
-				<form method="post"  novalidate>
-                    {% csrf_token %}
-                    <input type="hidden" name="username" value="{{ data.id }}">
+		<tr>
+			<div class="warning">
+				<form method="post"  action="{% static '../edituser/' %}" novalidate>
+					 {% csrf_token %}
+					<td><input type="text" name="username" value="{{ data.username }}"></td>
+					<input type="hidden" name="id" value="{{ data.id }}">
+					<td><input type="text" name="email" value="{{ data.email }}"></td>
+				    <td><input type="text" name="designation" value="{{data.groups.all.0 }}"></td>
                     <td><input type="submit" value="Update"></td>
                 </form>
-			</tr>
+			</div>
+		</tr>
 		{% endfor %}
+
 		</tbody>
 	</table>
 {% endblock %}

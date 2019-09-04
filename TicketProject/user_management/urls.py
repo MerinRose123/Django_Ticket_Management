@@ -14,6 +14,5 @@ urlpatterns = [
     path('listticket/', views.listticket, name='listticket'),
     path('listuser/', views.listuser, name='listuser'),
     path('deleteuser/', views.deleteuser, name='deleteuser'),
-    # path('edituser/', views.edituser, name='edituser'),
-    # path('passupdate/', views.passupdate, name='passupdate'),
+    path('edituser/', views.edituser, name='edituser'),
 ]
