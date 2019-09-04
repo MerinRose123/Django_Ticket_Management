@@ -6,34 +6,25 @@
     <table border="1" class="table">
 		<thead>
 			<tr colspan="2" class="success">
-				<th>Ticket id: </th>
 				<th> Assigned to: </th>
                 <th> start date: </th>
                 <th> End date: </th>
                 <th> Subject: </th>
-                <th> Message: </th>
                 <th> State: </th>
-                <th> Priority: </th>
                  <th> Update: </th>
 			</tr>
 		</thead>
 		<tbody>
 		{% for data in ticketlist %}
 			<tr class="warning">
-                <td>{{ data.ticket_id}}</td>
-				<td>{% for m_obj in data.many_set.all %}
-                        {{ m_obj.username }}
-                    {% endfor %}
-                </td>
-                <td>{{ data.start_date}}</td>
-                <td>{{ data.end_date}}</td>
-                <td>{{ data.subject}}</td>
-                <td>{{ data.message}}</td>
-                <td>{{ data.state}}</td>
-                <td>{{ data.priority}}</td>
-                <form method="post" novalidate>
-                    {% csrf_token %}
-                    <input type="hidden" name="ticket" value="{{ data.ticket_id }}">
+                <form method="post"  action="{% static '../editticket/' %}" novalidate>
+					 {% csrf_token %}
+                    <td><input type="text" name="assigned_to" value="{{ data.assigned_to }}"></td></td>
+					<td><input type="text" name="start_date" value="{{ data.start_date }}"></td>
+                    <input type="hidden" name="ticket_id" value="{{ data.ticket_id }}">
+					<td><input type="text" name="end_date" value="{{ data.end_date }}"></td>
+                    <td><input type="text" name="subject" value="{{data.subject }}"></td>
+				    <td><input type="text" name="state" value="{{data.state }}"></td>
                     <td><input type="submit" value="Update"></td>
                 </form>
 			</tr>
