@@ -46,7 +46,6 @@ class TicketAddForm(forms.ModelForm):
             "end_date": "End date",
             "subject": "Subject",
             "message": "Message",
-            "state": "state",
             "priority": "Priority"
 
         }

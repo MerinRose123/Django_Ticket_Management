@@ -6,27 +6,34 @@
     <table border="1" class="table">
 		<thead>
 			<tr colspan="2" class="success">
+                <th>Ticket id</th>
 				<th> Assigned to </th>
                 <th> start date </th>
                 <th> End date </th>
                 <th> Subject </th>
                 <th> State </th>
-                 <th> Update </th>
+                 <th> End </th>
+                <th> Begin </th>
 			</tr>
 		</thead>
 		<tbody>
 		{% for data in ticketlist %}
 			<tr class="warning">
-                <form method="post"  action="{% static '../edit_state_ticket/' %}" novalidate>
+                <td>{{ data.ticket_id }}</td>
+                <td>{{ data.assigned_to }}</td>
+                <td>{{ data.start_date }}</td>
+                <td>{{ data.end_date }}</td>
+                <td>{{data.subject }}</td>
+                <td>{{data.state }}</td>
+                <form method="post"  action="{% static '../edit_state_ticket_to_done/' %}" novalidate>
 					 {% csrf_token %}
-                    <td>{{ data.assigned_to }}</td>
-					<td>{{ data.start_date }}</td>
-                    <td>{{ data.ticket_id }}</td>
-					<td>{{ data.end_date }}</td>
-                    <td>{{data.subject }}</td>
-				    <td><input type="text" name="state" value="{{data.state }}"></td>
                     <input type="hidden" name="ticket_id" value="{{data.ticket_id }}">
-                    <td><input type="submit" value="Update State"></td>
+                    <td><input type="submit" value="End"></td>
+                </form>
+                <form method="post"  action="{% static '../edit_state_ticket_to_progress/' %}" novalidate>
+					 {% csrf_token %}
+                    <input type="hidden" name="ticket_id" value="{{data.ticket_id }}">
+                    <td><input type="submit" value="Begin"></td>
                 </form>
 			</tr>
 

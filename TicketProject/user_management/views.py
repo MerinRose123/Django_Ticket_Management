@@ -1,15 +1,11 @@
 from django.shortcuts import render, redirect
-from django.shortcuts import HttpResponse
 from django.contrib.auth import (
     authenticate,
     login,
     logout,
-    update_session_auth_hash,
-
 )
 from django.contrib.auth.hashers import make_password
 from django.contrib import messages
-from django.contrib.auth.models import Group
 from .forms import *
 from django.contrib.auth.decorators import login_required
 from .models import *
@@ -102,10 +98,6 @@ def deleteuser(request):
 @login_required
 def listuser(request):
     data = User.objects.all()
-    # group = User.groups.get(name='super_admin')
-    results = User.objects.filter(username=request.user)
-    # for user in results:
-        #print(user.groups.all())
     return render(request, 'userlistview.html', {'userlogin': data})
 
 
@@ -147,7 +139,7 @@ def addticket(request):
         end_date = form.data['end_date']
         subject = form.data['subject']
         message = form.data['message']
-        state = form.data['state']
+        state = "CRT"
         priority = form.data['priority']
         assigned_to = User.objects.get(id=assigned_to_id)
         q = Ticket(assigned_to=assigned_to, start_date=start_date, end_date=end_date,
@@ -191,16 +183,31 @@ def viewticket(request):
 
 
 @login_required
-def edit_state_ticket(request):
+def edit_state_ticket_to_progress(request):
     if request.method == 'POST':
         ticket_id = request.POST.get('ticket_id')
-        state = request.POST.get('state')
         ticket = Ticket.objects.get(ticket_id=ticket_id)
-        if state == 'DNE':
-            ticket.state = state
+        if ticket.state != "DNE":
+            ticket.state = "PRG"
+            ticket.save()
         else:
-            messages.error(request, 'Invalid ticket state.Type DNE for done or cancelled state.')
-        ticket.save()
+            messages.error(request, 'Ticket is in done state.So you can not begin this ticket')
+        response = redirect('../view_ticket_system_admin')
+    else:
+        response = redirect('../home/')
+    return response
+
+
+@login_required
+def edit_state_ticket_to_done(request):
+    if request.method == 'POST':
+        ticket_id = request.POST.get('ticket_id')
+        ticket = Ticket.objects.get(ticket_id=ticket_id)
+        if ticket.state == "PRG":
+            ticket.state = "DNE"
+            ticket.save()
+        else:
+            messages.error(request, 'Ticket is in create state.So have to begin before ending the ticket.')
         response = redirect('../view_ticket_system_admin')
     else:
         response = redirect('../home/')

@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adcd27c8-b4a4-420a-ba94-e16cfb1c1ced" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user_management/templates/viewticket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_management/migrations/0002_auto_20190903_1208.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_management/migrations/0003_auto_20190903_1213.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_management/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_management/templates/deleteticket.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_management/templates/deleteuser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/templates/addticket.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/templates/addticket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_management/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_management/templates/ticketlistview.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/templates/ticketlistview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_management/templates/userlistview.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/templates/userlistview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_management/templates/viewticket.html" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/templates/viewticket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_management/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_management/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user_management/views.py" afterDir="false" />
     </list>

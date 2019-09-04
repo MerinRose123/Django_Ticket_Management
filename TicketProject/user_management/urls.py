@@ -17,5 +17,6 @@ urlpatterns = [
     path('edituser/', views.edituser, name='edituser'),
     path('editticket/', views.editticket, name='editticket'),
     path('view_ticket_system_admin/', views.viewticket, name='viewticket'),
-    path('edit_state_ticket/', views.edit_state_ticket, name='edit_state_ticket'),
+    path('edit_state_ticket_to_done/', views.edit_state_ticket_to_done, name='edit_state_ticket_to_done'),
+    path('edit_state_ticket_to_progress/', views.edit_state_ticket_to_progress, name='edit_state_ticket_to_progress'),
 ]

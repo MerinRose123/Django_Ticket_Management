@@ -27,7 +27,7 @@
                     <input type="hidden" name="ticket_id" value="{{ data.ticket_id }}">
 					<td><input type="text" name="end_date" value="{{ data.end_date }}"></td>
                     <td><input type="text" name="subject" value="{{data.subject }}"></td>
-				    <td><input type="text" name="state" value="{{data.state }}"></td>
+                    <td><input type="text" name="state" value="{{data.state }}"></td>
                     <td><input type="submit" value="Update"></td>
                 </form>
                 {% if request.user|has_group:"super_admin" %}
