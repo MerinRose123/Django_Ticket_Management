@@ -3,8 +3,8 @@
     <div class="login-page">
         <h2><center>Ticket Management System</center></h2>
       <div class="form">
-        <form class="login-form">
-            <h3>Register Here</h3>
+          <h3>Register Here</h3>
+        <form class="login-form" method='POST' novalidate>
           {% csrf_token %}
             <table>
                 <tr>
@@ -15,6 +15,9 @@
                 </tr>
                 <tr>
                     <td>{{ form.last_name }}</td>
+                </tr>
+                <tr>
+                    <td>{{ form.email }}</td>
                 </tr>
                 <tr>
                     <td>{{ form.phone }}</td>
@@ -30,7 +33,6 @@
                 </tr>
             </table>
             <input id="submit" class="button" type="submit" value="Register" />
-          <!--<p class="message">Not registered? <a href="#">Create an account</a></p>-->
         </form>
           <div id="container">
             <div class="error">

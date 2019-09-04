@@ -15,6 +15,8 @@ class RegisterForm(forms.Form):
                                  widget=forms.TextInput(attrs={'placeholder': 'First name'}))
     last_name = forms.CharField(max_length=50, label='first name',
                                 widget=forms.TextInput(attrs={'placeholder': 'Last name'}))
+    email = forms.CharField(max_length=50, label='Email',
+                            widget=forms.TextInput(attrs={'placeholder': 'Email'}))
     phone = forms. CharField(max_length=50, label='phone',
                              widget=forms.TextInput(attrs={'placeholder': 'Phone Number'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}))
