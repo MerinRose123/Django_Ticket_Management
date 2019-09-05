@@ -22,8 +22,6 @@
 				</div>
 			</div>
 			<div class="container1">
-				{% block content %}
-                    This is the base page.Please login to get started......
 				<div class="success">
 					{% if messages %}
 						<ul class="messages">
@@ -35,6 +33,8 @@
 						</ul>
 					{% endif %}
 				</div>
+				{% block content %}
+                    This is the base page.Please login to get started......
 
 				{% endblock %}
 			</div>

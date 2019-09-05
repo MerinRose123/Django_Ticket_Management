@@ -1,3 +1,4 @@
 from django.test import TestCase
 
-# Create your tests here.
+from .tasks import add
+add.apply_async((4, 4), retry=False)

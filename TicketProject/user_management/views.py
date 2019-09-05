@@ -9,6 +9,9 @@ from django.contrib import messages
 from .forms import *
 from django.contrib.auth.decorators import login_required
 from .models import *
+from datetime import date
+from django.core import serializers
+from .tasks import *
 
 
 # Adding user to group according to designation
@@ -236,3 +239,15 @@ def editticket(request):
     else:
         response = redirect('../home/')
     return response
+
+
+# Changing state to cancelled if end date is less than today.
+@property
+def is_ticket_cancelled(self):
+    tickets = serializers.serialize("python", Ticket.objects.all())
+    # tickets = Ticket.objects.all()
+    result = send(tickets)
+    print('result')
+
+
+

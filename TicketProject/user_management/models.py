@@ -32,10 +32,12 @@ class Ticket(models.Model):
     CREATED = 'CRT'
     PROGRESS = 'PRG'
     DONE = 'DNE'
+    CANCEL = 'CAN'
     STATE_CHOICES = [
         (CREATED, 'created'),
         (PROGRESS, 'in progress'),
-        (DONE, 'done or cancelled'),
+        (DONE, 'done'),
+        (CANCEL, 'cancelled'),
     ]
     state = models.CharField(
         max_length=3,
