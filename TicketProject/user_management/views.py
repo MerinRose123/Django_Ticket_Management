@@ -1,3 +1,4 @@
+from __future__ import absolute_import, unicode_literals
 from django.shortcuts import render, redirect
 from django.contrib.auth import (
     authenticate,
@@ -12,6 +13,8 @@ from .models import *
 from datetime import date
 from django.core import serializers
 from .tasks import *
+from TicketProject.celery import app
+from celery.result import AsyncResult
 from django.contrib.auth.decorators import user_passes_test
 
 
@@ -164,7 +167,7 @@ def home(request):
     """
       Rendering home page
     """
-
+    celeryview(request)  # to change the date if current date is greater than end date.
     return render(request, 'home.html')
 
 
@@ -356,14 +359,24 @@ def editticketadmin(request):
     return response
 
 
-'''
-# Changing state to cancelled if end date is less than today.
-@property
-def is_ticket_cancelled(self):
-    tickets = serializers.serialize("python", Ticket.objects.all())
-    # tickets = Ticket.objects.all()
-    result = send(tickets)
-    print('result')
-'''
+def celeryview(request):
+    """
+    To check the end date.
+    :param request: The request object
+    """
+    print("starting celery")
+    tickets = Ticket.objects.all()
+    for ticket in tickets:
+        result_id = change_state.apply_async((ticket.end_date,), retry=False)
+        #result = result_id.get()
+        #res = AsyncResult(result_id)
+        #result = result_id.get()
+        # result_data = AsyncResult(id=result_id, app=app)
+        result = result_id.result
+        print('The result is', result)
+        if result is True:
+            ticket.state = "CAN"
+            tickets.save()
+            print('The state changed to cancel.')
 
 

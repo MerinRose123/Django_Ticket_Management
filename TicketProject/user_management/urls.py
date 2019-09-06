@@ -6,6 +6,7 @@ from .views import *
 
 # The urls which routes to respective view function
 urlpatterns = [
+    # path('celery/', views.celeryview, name='celery'),
     path('logout/', views.logoutview, name='logout_view'),
     path('addticket/', views.addticket, name='addticket'),
     path('addticketadmin/', views.addticketadmin, name='addticketadmin'),

@@ -1,25 +1,27 @@
-from celery import Celery
-from django.shortcuts import render, redirect
-from celery.utils.log import get_task_logger
-from datetime import date
+from __future__ import absolute_import, unicode_literals
+from celery import shared_task, Celery
+from TicketProject.settings.local import BROKER_URL
+from datetime import datetime
 
-'''
-app = Celery('tasks', backend='amqp', broker='amqp://guest:guest@localhost:6379//')
-logger = get_task_logger(__name__)
+celery = Celery('tasks', broker=BROKER_URL)
 
 
-@app.task(ignore_result=True)
-def add(x, y):
-    print("Function works")
-    return x + y
+@shared_task(name="change_state")
+def change_state(date1):
+    """
+    To run the worker type the command below in the terminal.
+    celery -A user_management.tasks worker --loglevel=info
 
+    :param date1:The end_date fetched from model Ticket
+    :return: True if the current date is greater than end date.
+            False if end date is greater than today.
+    """
+    end_date = datetime.strptime(date1, '%Y-%m-%dT%H:%M:%S')
+    today = datetime.now()
+    if today > end_date:
+        print('The end date is less than today.')
+        return True
+    else:
+        print("The end date is greater than today.")
+        return False
 
-@app.task(name="send")
-def send(tickets):
-    """sends data to view function when current date is greater than end date in ticket"""
-    logger.info("Sent")
-    for ticket in tickets:
-        if date.today() > ticket.end_date:
-            print("Function works")
-    return redirect('../home/')
-'''
