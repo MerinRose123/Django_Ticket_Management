@@ -3,7 +3,7 @@ from django.contrib.auth.models import Group
 
 register = template.Library()
 
-
+# To display contents in the template in a group specific manner.
 @register.filter(name='has_group')
 def has_group(user, group_name):
     try:

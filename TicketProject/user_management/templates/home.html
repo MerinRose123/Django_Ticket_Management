@@ -90,10 +90,10 @@
 			}
 			if(action.event == "New Ticket") {
 			  var el = document.getElementById("notticket");
-			  if {{request.user}} == action.assigned_to {
-                  el.innerHTML += `New ticket <b>${action.ticket_id}</b> has created and assigned system_admin <b>${action.assigned_to}</b>!`;
+              if (action.assigned_to == '{{request.user.username}}'){
+                  el.innerHTML += `New ticket <b>${action.ticket_id}</b> has created and assigned you system_admin <b>${action.assigned_to}</b>!`;
                   ticket.appendChild(el);
-                  }
+                }
 			}
 			if(action.event == "Ticket Deleted") {
 			  var el = document.getElementById("review");

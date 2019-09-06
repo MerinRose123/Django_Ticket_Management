@@ -4,17 +4,18 @@ from django.contrib.auth.models import Group
 
 
 class LoginForm(forms.Form):
+    """
+    Form to log in a current user
+    """
     username = forms.CharField(max_length=50, label='Username',
                                widget=forms.TextInput(attrs={'placeholder': 'username'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Password'}))
 
 
-class DeleteUserForm(forms.Form):
-    username = forms.CharField(max_length=50, label='Username',
-                               widget=forms.TextInput(attrs={'placeholder': 'username'}))
-
-
 class RegisterForm(forms.Form):
+    """
+    Form to register a new user
+    """
     username = forms.CharField(max_length=50, label='Username',
                                widget=forms.TextInput(attrs={'placeholder': 'Username'}))
     first_name = forms.CharField(max_length=50, label='first name',
@@ -37,6 +38,9 @@ class RegisterForm(forms.Form):
 
 
 class TicketAddForm(forms.ModelForm):
+    """
+    Form to add new ticket
+    """
     class Meta:
         model = Ticket
         fields = '__all__'
@@ -53,11 +57,6 @@ class TicketAddForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['assigned_to'].queryset = User.objects.filter(groups__name='system_admin')
-
-
-class TicketDeleteForm(forms.Form):
-    ticket_id = forms.CharField(max_length=50, label='ticket id',
-                                widget=forms.TextInput(attrs={'placeholder': 'Ticket Id'}))
 
 
 # Form to edit the details of the current user

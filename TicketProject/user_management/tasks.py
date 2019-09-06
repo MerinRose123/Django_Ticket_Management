@@ -15,7 +15,7 @@ def add(x, y):
 
 @app.task(name="send")
 def send(tickets):
-    """sends data to view function"""
+    """sends data to view function when current date is greater than end date in ticket"""
     logger.info("Sent")
     for ticket in tickets:
         if date.today() > ticket.end_date:

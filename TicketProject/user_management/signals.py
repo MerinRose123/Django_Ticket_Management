@@ -34,7 +34,7 @@ def post_delete_handler(sender, instance, **kwargs):
 @receiver(post_save, sender=Ticket)
 def announce_new_ticket(sender, instance, created, **kwargs):
     """
-    Send a notification when a new ticket is created and assigned to a system admin
+    Send a notification to the respective system admin when a new ticket is created and assigned to her.
     """
     if created:
         serializer = UserSerializer(data=instance.assigned_to)

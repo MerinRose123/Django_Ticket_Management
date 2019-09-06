@@ -106,6 +106,9 @@ def listuser(request):
 
 @login_required
 def edituser(request):
+    """
+    Editing the details of a current user
+    """
     if request.method == 'POST':
         username = request.POST.get('username')
         email = request.POST.get('email')
@@ -124,17 +127,26 @@ def edituser(request):
 
 
 def base(request):
+    """
+    Rendering the base page which is to be displayed when initially the site is loaded
+    """
     return render(request, 'base1.html')
 
 
 @login_required
 def home(request):
+    """
+      Rendering home page
+    """
+
     return render(request, 'home.html')
 
 
 @login_required
 def addticket(request):
-    # processing the data after the user has entered the details in the form
+    """
+     Adding a new ticket to database
+    """
     if request.method == 'POST':
         form = TicketAddForm(request.POST)
         assigned_to_id = form.data['assigned_to']
@@ -159,6 +171,9 @@ def addticket(request):
 
 @login_required
 def deleteticket(request):
+    """
+    Deleting an existing ticket
+    """
     if request.method == 'POST':
         ticket_id = request.POST.get("ticket_id")
         if Ticket.objects.filter(ticket_id=ticket_id).exists():
@@ -180,6 +195,9 @@ def listticket(request):
 
 @login_required
 def viewticket(request):
+    """
+    Viewing all tickets to super_admin and senior_sysem_admin.
+    """
     user = request.user
     data = Ticket.objects.filter(assigned_to=user)
     return render(request, 'viewticket.html', {'ticketlist': data})
@@ -187,6 +205,9 @@ def viewticket(request):
 
 @login_required
 def edit_state_ticket_to_progress(request):
+    """
+    When system admin clicks begin changing state of ticket to progress
+    """
     if request.method == 'POST':
         ticket_id = request.POST.get('ticket_id')
         ticket = Ticket.objects.get(ticket_id=ticket_id)
@@ -203,6 +224,10 @@ def edit_state_ticket_to_progress(request):
 
 @login_required
 def edit_state_ticket_to_done(request):
+    """
+    When the respective system_admin clicks end moving ticket to done state
+    """
+
     if request.method == 'POST':
         ticket_id = request.POST.get('ticket_id')
         ticket = Ticket.objects.get(ticket_id=ticket_id)
@@ -219,6 +244,9 @@ def edit_state_ticket_to_done(request):
 
 @login_required
 def editticket(request):
+    """
+    Editing a ticket
+    """
     if request.method == 'POST':
         assigned_to = request.POST.get('assigned_to')
         start_date = request.POST.get('start_date')

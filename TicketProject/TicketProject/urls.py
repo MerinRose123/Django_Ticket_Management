@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('user_management.urls')),
+    path('', include('user_management.urls')),  # Making root url as that of user_management app
 ]

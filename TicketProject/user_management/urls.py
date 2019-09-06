@@ -3,6 +3,8 @@ from . import views
 from django.views.generic import TemplateView
 from .views import *
 
+
+# The urls which routes to respective view function
 urlpatterns = [
     path('logout/', views.logoutview, name='logout_view'),
     path('addticket/', views.addticket, name='addticket'),

@@ -4,6 +4,9 @@ from .models import User
 
 
 class UserSerializer(serializers.ModelSerializer):
+    """
+    To serialize the model User
+    """
     email = serializers.EmailField(
             required=True,
             validators=[UniqueValidator(queryset=User.objects.all())]
