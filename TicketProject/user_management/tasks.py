@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from celery.utils.log import get_task_logger
 from datetime import date
 
+'''
 app = Celery('tasks', backend='amqp', broker='amqp://guest:guest@localhost:6379//')
 logger = get_task_logger(__name__)
 
@@ -21,3 +22,4 @@ def send(tickets):
         if date.today() > ticket.end_date:
             print("Function works")
     return redirect('../home/')
+'''

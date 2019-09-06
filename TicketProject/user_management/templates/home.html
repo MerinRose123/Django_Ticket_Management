@@ -12,7 +12,7 @@
          <div class="dropdown">
             <button class="dropdown-button">Ticket operations</button>
             <div class="dropdown-list">
-                <a href="{% static '../addticket/' %}">Add Ticket</a>
+                <a href="{% static '../addticketadmin/' %}">Add Ticket</a>
                 <a href="{% static '../listticket/' %}">Delete Ticket</a>
                 <a href="{% static '../listticket/' %}">List Tickets</a>
                  <a href="{% static '../listticket/' %}">Update a Ticket</a>
@@ -91,7 +91,7 @@
 			if(action.event == "New Ticket") {
 			  var el = document.getElementById("notticket");
               if (action.assigned_to == '{{request.user.username}}'){
-                  el.innerHTML += `New ticket <b>${action.ticket_id}</b> has created and assigned you system_admin <b>${action.assigned_to}</b>!`;
+                  el.innerHTML += `New ticket <b>${action.ticket_id}</b> has created and assigned to you system_admin <b>${action.assigned_to}</b>!`;
                   ticket.appendChild(el);
                 }
 			}

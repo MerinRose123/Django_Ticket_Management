@@ -1,4 +1,5 @@
 {% extends 'login.html' %}
+{% load has_group %}
 {% block content %}
     <div class="login-page">
         <h2><center>Ticket Management System</center></h2>
@@ -7,10 +8,12 @@
             <h3>Create New Ticket</h3>
           {% csrf_token %}
             <table>
+                {% if request.user|has_group:"senior_system_admin"%}
                 <tr>
                     <td>{{ form.assigned_to.label }}</td>
                     <td>{{ form.assigned_to }}</td>
                 </tr>
+                {% endif %}
                 <tr>
                     <td>{{ form.start_date.label }}</td>
                     <td>{{ form.start_date }}</td>

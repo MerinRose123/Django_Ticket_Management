@@ -12,6 +12,7 @@ from .models import *
 from datetime import date
 from django.core import serializers
 from .tasks import *
+from django.contrib.auth.decorators import user_passes_test
 
 
 # Adding user to group according to designation
@@ -24,6 +25,28 @@ def add_user_to_group(user, designation):
     else:
         group = Group.objects.get(name='system_admin')
     user.groups.add(group)
+
+
+def is_super_admin(user):
+    """
+    Checks whether the user is a super admin
+    :param user:The request user who is logged in
+    :return: True if the user is a member of super admin group
+    """
+    return user.groups.filter(name='super_admin').exists()
+
+
+def is_system_admin(user):
+    """
+    Checks whether the user is a system admin
+    :param user:The request user who is logged in
+    :return: True if the user is a member of system admin group
+    """
+    return user.groups.filter(name='system_admin').exists()
+
+
+def is_senior_system_admin(user):
+    return user.groups.filter(name='senior_system_admin').exists()
 
 
 # Registering a new user
@@ -86,6 +109,7 @@ def logoutview(request):
 
 # deleting a user
 @login_required
+@user_passes_test(is_super_admin)
 def deleteuser(request):
     if request.method == 'POST':
         id = request.POST.get('id')
@@ -99,12 +123,14 @@ def deleteuser(request):
 
 # Viewing the details of all the users in the home page
 @login_required
+@user_passes_test(is_super_admin)
 def listuser(request):
     data = User.objects.all()
     return render(request, 'userlistview.html', {'userlogin': data})
 
 
 @login_required
+@user_passes_test(is_super_admin)
 def edituser(request):
     """
     Editing the details of a current user
@@ -143,6 +169,7 @@ def home(request):
 
 
 @login_required
+@user_passes_test(is_senior_system_admin)
 def addticket(request):
     """
      Adding a new ticket to database
@@ -170,6 +197,7 @@ def addticket(request):
 
 
 @login_required
+@user_passes_test(is_super_admin)
 def deleteticket(request):
     """
     Deleting an existing ticket
@@ -204,6 +232,7 @@ def viewticket(request):
 
 
 @login_required
+@user_passes_test(is_system_admin)
 def edit_state_ticket_to_progress(request):
     """
     When system admin clicks begin changing state of ticket to progress
@@ -223,6 +252,7 @@ def edit_state_ticket_to_progress(request):
 
 
 @login_required
+@user_passes_test(is_system_admin)
 def edit_state_ticket_to_done(request):
     """
     When the respective system_admin clicks end moving ticket to done state
@@ -243,6 +273,7 @@ def edit_state_ticket_to_done(request):
 
 
 @login_required
+@user_passes_test(is_senior_system_admin)
 def editticket(request):
     """
     Editing a ticket
@@ -269,6 +300,63 @@ def editticket(request):
     return response
 
 
+@login_required
+@user_passes_test(is_super_admin)
+def addticketadmin(request):
+    """
+     Adding a new ticket to database by super admin. Cannot add assigned to field
+    """
+    if request.method == 'POST':
+        form = TicketAddForm(request.POST)
+        # assigned_to_id = form.data['assigned_to']
+        start_date = form.data['start_date']
+        end_date = form.data['end_date']
+        subject = form.data['subject']
+        message = form.data['message']
+        state = "CRT"
+        priority = form.data['priority']
+        # assigned_to = User.objects.get(id=assigned_to_id)
+        q = Ticket(start_date=start_date, end_date=end_date,
+                   subject=subject, message=message, state=state, priority=priority)
+        q.save()
+        print('Ticket added')
+        response = redirect('../home/')
+        return response
+    else:
+        # Rendering the form in html initially
+        form = TicketAddForm()
+    return render(request, 'addticket.html', {'form': form})
+
+
+@login_required
+@user_passes_test(is_super_admin)
+def editticketadmin(request):
+    """
+    Editing a ticket by super admin. Can not edit assigned to field
+    """
+    if request.method == 'POST':
+        # assigned_to = request.POST.get('assigned_to')
+        start_date = request.POST.get('start_date')
+        end_date = request.POST.get('end_date')
+        ticket_id = request.POST.get('ticket_id')
+        subject = request.POST.get('subject')
+        state = request.POST.get('state')
+        ticket = Ticket.objects.get(ticket_id=ticket_id)
+        # user = User.objects.get(username=assigned_to)
+        # ticket.assigned_to = user
+        if start_date < end_date:
+            ticket.start_date = start_date
+            ticket.end_date = end_date
+        ticket.subject = subject
+        ticket.state = state
+        ticket.save()
+        response = redirect('../listticket')
+    else:
+        response = redirect('../home/')
+    return response
+
+
+'''
 # Changing state to cancelled if end date is less than today.
 @property
 def is_ticket_cancelled(self):
@@ -276,6 +364,6 @@ def is_ticket_cancelled(self):
     # tickets = Ticket.objects.all()
     result = send(tickets)
     print('result')
-
+'''
 
 

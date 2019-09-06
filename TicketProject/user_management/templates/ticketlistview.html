@@ -7,7 +7,7 @@
 		<thead>
 			<tr colspan="2" class="success">
                 <th> Ticket id </th>
-				<th> Assigned to </th>
+                <th> Assigned to </th>
                 <th> start date </th>
                 <th> End date </th>
                 <th> Subject </th>
@@ -24,7 +24,11 @@
                 <td>{{data.ticket_id }}</td>
                 <form method="post"  action="{% static '../editticket/' %}" novalidate>
 					 {% csrf_token %}
-                    <td><input type="text" name="assigned_to" value="{{ data.assigned_to }}"></td></td>
+                    {% if request.user|has_group:"senior_system_admin"%}
+                        <td><input type="text" name="assigned_to" value="{{ data.assigned_to }}"></td>
+                    {% else %}
+                        <td>{{ data.assigned_to }}</td>
+                    {% endif %}
 					<td><input type="text" name="start_date" value="{{ data.start_date }}"></td>
                     <input type="hidden" name="ticket_id" value="{{ data.ticket_id }}">
 					<td><input type="text" name="end_date" value="{{ data.end_date }}"></td>
