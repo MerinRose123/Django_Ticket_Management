@@ -34,20 +34,18 @@ def post_delete_handler(sender, instance, **kwargs):
 @receiver(post_save, sender=Ticket)
 def announce_new_ticket(sender, instance, created, **kwargs):
     """
-    Send a notification to the respective system admin when a new ticket is created and assigned to her.
+    Send a notification to the respective system admin when a new ticket is assigned to her.
     """
-    if created:
+    if instance.assigned_to is not None:
         serializer = UserSerializer(data=instance.assigned_to)
-        # if serializer.is_valid():
         json = serializer.initial_data
-        if instance.assigned_to:
-            channel_layer = get_channel_layer()
-            async_to_sync(channel_layer.group_send)(
-                "gossip", {"type": "user.gossip",
-                           "event": "New Ticket",
-                           "ticket_id": instance.ticket_id,
-                           "assigned_to": json.username,
-                           })
+        channel_layer = get_channel_layer()
+        async_to_sync(channel_layer.group_send)(
+            "gossip", {"type": "user.gossip",
+                       "event": "New Ticket",
+                       "ticket_id": instance.ticket_id,
+                       "assigned_to": json.username,
+                       })
 
 
 @receiver(post_delete, sender=Ticket)

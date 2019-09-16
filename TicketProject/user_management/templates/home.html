@@ -91,7 +91,7 @@
 			if(action.event == "New Ticket") {
 			  var el = document.getElementById("notticket");
               if (action.assigned_to == '{{request.user.username}}'){
-                  el.innerHTML += `New ticket <b>${action.ticket_id}</b> has created and assigned to you system_admin <b>${action.assigned_to}</b>!`;
+                  el.innerHTML += `New ticket <b>${action.ticket_id}</b> is assigned to you system_admin <b>${action.assigned_to}</b>!`;
                   ticket.appendChild(el);
                 }
 			}

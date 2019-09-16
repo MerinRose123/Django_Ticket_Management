@@ -179,15 +179,15 @@ def addticket(request):
     """
     if request.method == 'POST':
         form = TicketAddForm(request.POST)
-        assigned_to_id = form.data['assigned_to']
+        #assigned_to_id = form.data['assigned_to']
         start_date = form.data['start_date']
         end_date = form.data['end_date']
         subject = form.data['subject']
         message = form.data['message']
         state = "CRT"
         priority = form.data['priority']
-        assigned_to = User.objects.get(id=assigned_to_id)
-        q = Ticket(assigned_to=assigned_to, start_date=start_date, end_date=end_date,
+        #assigned_to = User.objects.get(id=assigned_to_id)
+        q = Ticket(start_date=start_date, end_date=end_date,
                    subject=subject, message=message, state=state, priority=priority)
         q.save()
         print('Ticket added')
@@ -366,17 +366,16 @@ def celeryview(request):
     """
     print("starting celery")
     tickets = Ticket.objects.all()
-    for ticket in tickets:
-        result_id = change_state.apply_async((ticket.end_date,), retry=False)
-        #result = result_id.get()
-        #res = AsyncResult(result_id)
-        #result = result_id.get()
-        # result_data = AsyncResult(id=result_id, app=app)
-        result = result_id.result
-        print('The result is', result)
-        if result is True:
-            ticket.state = "CAN"
-            tickets.save()
-            print('The state changed to cancel.')
+    result_id = change_state.apply_async((), retry=False)
+    # result = result_id.get()
+    # #res = AsyncResult(result_id)
+    # #result = result_id.get()
+    # # result_data = AsyncResult(id=result_id, app=app)
+    # #result = result_id.result
+    # print('The result is', result)
+    # if result is True:
+    #     ticket.state = "CAN"
+    #     tickets.save()
+    #     print('The state changed to cancel.')
 
 
