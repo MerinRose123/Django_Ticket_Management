@@ -6,3 +6,6 @@ Copy the migration which is to create group to the newly created migration and m
 This process is to create groups.
 call register url first to register a user as super_admin.Then go to default page with root url.
 Now login using the currently registered user.
+
+### TO Do:
+* Remove all non required files like database related dump files like dump.rdb, .idea file and celery beat related files using gitignore.
