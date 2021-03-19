@@ -24,7 +24,7 @@ django-celery==3.3.1
 django-channels==0.7.0
 django-phone-field==1.8.0
 django-picklefield==2.0
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 hiredis==1.0.0
 hyperlink==19.0.0
 idna==2.8
