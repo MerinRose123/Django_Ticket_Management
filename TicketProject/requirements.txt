@@ -1,7 +1,7 @@
 aioredis==1.2.0
 amqp==2.5.1
 anyjson==0.3.3
-arrow==0.14.6
+arrow==0.15.1
 asgiref==3.2.2
 asn1crypto==0.24.0
 async-timeout==3.0.1
